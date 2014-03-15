@@ -31,3 +31,4 @@ systemconfig.properties
 
 # TeXlipse plugin
 .texlipse
+.springBeans

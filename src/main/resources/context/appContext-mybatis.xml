@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- DBCP & Log -->
+	<bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="#{sysconfig['jdbc.driverClassName']}" />
+		<property name="url" value="#{sysconfig['jdbc.url']}" />
+		<property name="username" value="#{sysconfig['jdbc.username']}" />
+		<property name="password" value="#{sysconfig['jdbc.password']}" />
+		<property name="validationQuery" value="select 1" />
+	</bean>
+	
+	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+    	<constructor-arg ref="dataSourceSpied" />
+  	</bean>
+
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="typeAliasesPackage" value="kr.co.tdc.model" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath*:sql/mapper/**/*.xml" />
+	</bean>
+
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryBean" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
+		<property name="basePackage" value="kr.co.tdc.dao" />
+		<property name="annotationClass" value="org.springframework.stereotype.Repository" ></property>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>
