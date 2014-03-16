@@ -1,6 +1,6 @@
 Test-Project
 ============
-[![Build Status](https://travis-ci.org/aircha/Test-Project.png?branch=aircha)](https://travis-ci.org/aircha/Test-Project)
+[![Build Status](https://travis-ci.org/aircha/Test-Project.png?branch=master)](https://travis-ci.org/aircha/Test-Project)
 
 ##github Test용 저장소
 
