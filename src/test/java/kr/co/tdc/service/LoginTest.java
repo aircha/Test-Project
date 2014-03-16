@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNotNull;
 import kr.co.tdc.common.AbstractTestSetting;
 import kr.co.tdc.model.Login;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,6 +14,7 @@ public class LoginTest extends AbstractTestSetting {
 	LoginService loginService;
 	
 	@Test
+	@Ignore
 	public void testLoginProc() {
 		Login login = new Login();
 		login.setEmail("aircha@gmail.com");
