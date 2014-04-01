@@ -1,6 +1,5 @@
 Test-Project
 ============
-[![Build Status](https://travis-ci.org/aircha/Test-Project.png?branch=aircha)](https://travis-ci.org/aircha/Test-Project)
 
 ## github Test용 저장소
 
@@ -11,3 +10,5 @@ Test-Project
 ```java
 import org.aircha.test.*
 ```
+
+>팀시티로 빌드하면 잘 될까요?
