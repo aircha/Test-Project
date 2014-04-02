@@ -20,7 +20,7 @@ $(document).ready(function(){
 	<div class="container" style="width: 20%">
 		<form class="form-signin" role="form" action="${pageContext.request.contextPath}/loginProc" method="post">
 			<img src="${pageContext.request.contextPath}/resources/images/IMG_1543.JPG" class="img-rounded" style="width: 100%; height: 100%">
-			<h2 class="form-signin-heading">로그인해 주세요</h2>
+			<h2 class="form-signin-heading">로그인좀해 주세요</h2>
 			<input type="email" class="form-control" placeholder="Email address" required="" autofocus="" name="email">
 			<input type="password" class="form-control" placeholder="Password" required="" name="password">
 			<label class="checkbox"> <input type="checkbox" value="remember-me">계정 기억하기</label>
