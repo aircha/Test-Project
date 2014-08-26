@@ -1,6 +1,8 @@
 Test-Project
 ============
 
+[![Build Status](https://travis-ci.org/aircha/Test-Project.svg?branch=aircha)](https://travis-ci.org/aircha/Test-Project)
+
 ## github Test
 
 **보금자리 만들지 말지**
@@ -34,3 +36,5 @@ public class PermissionServiceImpl implements PermissionService {
 
 }
 ```
+
+주소: http://aircha.github.io/blog
