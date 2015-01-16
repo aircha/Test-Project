@@ -1,7 +1,7 @@
 package kr.co.tdc.service;
 
 import kr.co.tdc.dao.LoginDao;
-import kr.co.tdc.model.Login;
+import kr.co.tdc.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class LoginServiceImpl implements LoginService {
 	LoginDao loginDao;
 
 	@Override
-	public Login loginProc(Login login) {
+	public User loginProc(User login) {
 		return loginDao.userInfo(login);
 	}
 

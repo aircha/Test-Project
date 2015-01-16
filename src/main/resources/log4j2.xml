@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+   <appenders>
+      <console name="Console" target="SYSTEM_OUT">
+         <patternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%-5p](%-35c{1}:%-3L) %m%n" />
+      </console>
+   </appenders>
+   <loggers>
+      
+      <!-- Application Loggers -->
+      <logger name="kr.co.tdc" level="debug" additivity="false">
+         <appenderRef ref="Console" />
+      </logger>
+      
+      <!-- 3rdparty Loggers -->
+      <logger name="org.springframework.core" level="debug" additivity="false">
+         <appenderRef ref="Console" />
+      </logger>
+      <logger name="org.springframework.beans" level="debug" additivity="false">
+         <appenderRef ref="Console" />
+      </logger>
+      <logger name="org.springframework.context" level="debug" additivity="false">
+         <appenderRef ref="Console" />
+      </logger>
+      <logger name="org.springframework.web" level="debug" additivity="false">
+         <appenderRef ref="Console" />
+      </logger>
+      <logger name="log4jdbc.log4j2" level="error" additivity="false">
+         <appender-ref ref="Console" />
+      </logger>
+      
+      <!-- Root logger -->
+      <root level="error">
+         <appenderRef ref="Console" />
+      </root>
+   </loggers>
+</configuration>
