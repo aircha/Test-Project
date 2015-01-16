@@ -19,7 +19,7 @@ public class LoginTest extends AbstractTestSetting {
 		User login = new User();
 		login.setUser_email("aircha@gmail.com");
 		
-		login = loginService.loginProc(login);
+		login = loginService.userInfo(login);
 		assertNotNull("testLoginProc login user return", login.getUser_name());
 	}
 }
