@@ -27,12 +27,15 @@ public class LoginController {
 	
 	@RequestMapping(value="/loginProc", method=RequestMethod.POST)
 	public ModelAndView loginProc(ModelAndView mav, User login) {
-		login = loginService.loginProc(login);
-		if (login.getUser_name() == null || login.getUser_name().equals("")) {
+	   User userInfo = loginService.userInfo(login);
+		if (userInfo == null) {
+		   logger.info("userInfo null");
+		   mav.setViewName("/login");
 			return mav;
 		}
-		mav.addObject("userInfo", login);
+		mav.addObject("userInfo", userInfo);
 		mav.setViewName("/sample");
+		logger.info("sample page");
 		return mav;
 	}
 }

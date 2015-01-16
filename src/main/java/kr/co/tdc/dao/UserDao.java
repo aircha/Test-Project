@@ -5,6 +5,6 @@ import kr.co.tdc.model.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LoginDao {
+public interface UserDao {
 	User userInfo(User login);
 }

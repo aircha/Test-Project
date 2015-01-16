@@ -23,6 +23,7 @@
 <div class="container">
 	<div class="jumbotron">
 		<h1 id="tables-striped">Get the <small>fuck off</small></h1>
+      <div>by ${userInfo.user_name}</div>
 	</div>
 </div>
 </body>

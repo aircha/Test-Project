@@ -13,19 +13,19 @@
       </logger>
       
       <!-- 3rdparty Loggers -->
-      <logger name="org.springframework.core" level="debug" additivity="false">
+      <logger name="org.springframework.core" level="error" additivity="false">
          <appenderRef ref="Console" />
       </logger>
-      <logger name="org.springframework.beans" level="debug" additivity="false">
+      <logger name="org.springframework.beans" level="error" additivity="false">
          <appenderRef ref="Console" />
       </logger>
-      <logger name="org.springframework.context" level="debug" additivity="false">
+      <logger name="org.springframework.context" level="error" additivity="false">
          <appenderRef ref="Console" />
       </logger>
-      <logger name="org.springframework.web" level="debug" additivity="false">
+      <logger name="org.springframework.web" level="error" additivity="false">
          <appenderRef ref="Console" />
       </logger>
-      <logger name="log4jdbc.log4j2" level="error" additivity="false">
+      <logger name="log4jdbc.log4j2" level="info" additivity="false">
          <appender-ref ref="Console" />
       </logger>
       
