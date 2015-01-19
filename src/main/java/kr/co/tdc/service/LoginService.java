@@ -1,7 +1,7 @@
 package kr.co.tdc.service;
 
-import kr.co.tdc.model.Login;
+import kr.co.tdc.model.User;
 
 public interface LoginService {
-	Login loginProc(Login login);
+   User userInfo(User login);
 }
