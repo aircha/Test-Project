@@ -16,6 +16,9 @@ local.properties
 target/
 rebel.xml
 systemconfig.properties
+.idea/
+*.iml
+*.iws
 
 # External tool builders
 .externalToolBuilders/
