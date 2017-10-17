@@ -172,6 +172,14 @@
                <mainClass>org.test.int1.Main</mainClass>
             </configuration>
          </plugin>
+         <plugin>
+            <groupId>org.eluder.coveralls</groupId>
+            <artifactId>coveralls-maven-plugin</artifactId>
+            <version>4.0.0</version>
+            <configuration>
+               <repoToken>uLoaybT9z7Dvkk3563epANPfqTcdPwe8q</repoToken>
+            </configuration>
+         </plugin>
       </plugins>
    </build>
 </project>
