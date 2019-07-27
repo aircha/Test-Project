@@ -35,3 +35,6 @@ systemconfig.properties
 # TeXlipse plugin
 .texlipse
 .springBeans
+
+# jrebel plugin
+rebel.xml
